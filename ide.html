@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <script type="text/javascript" src="lib/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/rangy/rangy-core.js"></script>
+    <script type="text/javascript" src="lib/antlr3-all.js"></script>
+    <script type="text/javascript" src="lib/TurtleLexer.js"></script>
+    <script type="text/javascript" src="lib/TurtleParser.js"></script>
+    <script data-main="main" src="lib/require.js"></script>
+<style type="text/css">
+  .key { font-weight:bold; color:#fff; }
+  .ident { color:#d99; }
+  .literal { color:#c22; }
+  .pname {color:#9cc; }
+  .dot { color:#ff0; }
+  #ide {
+    float:left;
+    font-family: "Courier";
+    font-size: 13px;
+    color: #ccc;
+    border:1px dotted #ccc;
+    background: #333;
+    padding: 5px 10px 5px 10px;
+    width:700px;
+    height:650px;
+    overflow-y: scroll;
+  }
+  #console {
+    width: 720px;
+    height:80px;
+    overflow-y: scroll;
+  }
+  #console table {
+    width:100%;
+  }
+  #console table tr td {
+    border-top:#777;
+    font-size:11px;
+    padding: 3px 10px 3px 10px;
+  }
+  #console table tr:nth-child(even) td {
+    background:#bbb;
+  }
+  #console table tr:nth-child(odd) td {
+    background:#ddd;
+  }
+  #cc {
+    display:none;
+    width:500px;
+    height:200px;
+    position:absolute;
+    z-index:10;
+    overflow-y:scroll;
+  }
+  #cc a {
+    color: #9cc;
+    text-decoration:none;
+  }
+  #cc table tr td {
+    color:#ccc;
+    padding:2px 0px 2px 0px;
+    border-bottom:1px dotted #888;
+  }
+  #cc table tr:last-child td {
+    border:none;
+  }
+  #cc ul {
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    font-size:10px;
+  }
+  #cc ul li {
+    padding:1px 0px 1px 2px;
+    overflow:hidden;
+    height: 18px;
+  }
+  #cc ul li a {
+    display:block;
+    font-weight:bold;
+    font-size:13px;
+  }
+  #cc ul li:nth-child(even) {
+    background:#666;
+  }
+  #cc ul li:nth-child(odd) {
+    background:#555;
+  }
+  #caret {
+    position:absolute;
+    right:-5px;
+    bottom:-10px;
+    padding-top:3px;
+    width:50px;
+    height:20px;
+    color:#fff;
+    font-size:10px;
+    background:#000;
+    text-align:center;
+  }
+  body {
+    margin:0px;
+  }
+</style>
+
+                       </head>
+                       <body>
+                         <div id="cc"></div>
+                         <div style="position:relative;width:700px;height:650px;">
+                             <div id="caret"></div>
+                             <div contenteditable="true" id="ide"></div>
+                         </div>
+                         </div>
+                         <div id="console"><table cellpadding="0" cellspacing="0"></table></div>
+                       </body>
+                     </html>
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for specfile in lib/TurtleLexerSpec.js leo/ns.js 
+do
+  json=$(sed "s/=/: /g; s/$/,/;" grammars/ASTBuildingTurtle.tokens | tr '\n' ' ')
+  sed "s/@@TT@@/${json}/g;" $specfile > $specfile.new
+  rm $specfile && mv $specfile.new $specfile
+  echo "Tokentype definitions in ${specfile} successfully updated."
+done
+
+
